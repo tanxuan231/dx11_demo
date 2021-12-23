@@ -268,12 +268,13 @@ bool ColorShaderClass::SetShaderParameters(ID3D11DeviceContext* deviceContext, X
 	MatrixBufferType* dataPtr;
 	unsigned int bufferNumber;
 
-
+	// 转置矩阵
 	// Transpose the matrices to prepare them for the shader.
 	worldMatrix = XMMatrixTranspose(worldMatrix);
 	viewMatrix = XMMatrixTranspose(viewMatrix);
 	projectionMatrix = XMMatrixTranspose(projectionMatrix);
 
+	// 将矩阵数据写入到常量缓冲
 	// Lock the constant buffer so it can be written to.
 	result = deviceContext->Map(m_matrixBuffer, 0, D3D11_MAP_WRITE_DISCARD, 0, &mappedResource);
 	if(FAILED(result))
@@ -295,6 +296,7 @@ bool ColorShaderClass::SetShaderParameters(ID3D11DeviceContext* deviceContext, X
 	// Set the position of the constant buffer in the vertex shader.
 	bufferNumber = 0;
 
+	// 将常量缓冲绑定到渲染管线，使得着色器能够使用
 	// Finanly set the constant buffer in the vertex shader with the updated values.
     deviceContext->VSSetConstantBuffers(bufferNumber, 1, &m_matrixBuffer);
 

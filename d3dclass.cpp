@@ -338,13 +338,13 @@ bool D3DClass::Initialize(int screenWidth, int screenHeight, bool vsync, HWND hw
 	fieldOfView = 3.141592654f / 4.0f;
 	screenAspect = (float)screenWidth / (float)screenHeight;
 
-	// Create the projection matrix for 3D rendering.
+	// Create the projection matrix for 3D rendering 左手透视投影矩阵.
 	m_projectionMatrix = XMMatrixPerspectiveFovLH(fieldOfView, screenAspect, screenNear, screenDepth);
 
-    // Initialize the world matrix to the identity matrix.
+	// 将世界矩阵初始化为单位矩阵
 	m_worldMatrix = XMMatrixIdentity();
 
-	// Create an orthographic projection matrix for 2D rendering.
+	// Create an orthographic projection matrix for 2D rendering 正交投影矩阵.
 	m_orthoMatrix = XMMatrixOrthographicLH((float)screenWidth, (float)screenHeight, screenNear, screenDepth);
 
     return true;
