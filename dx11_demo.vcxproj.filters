@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="shader">
+      <UniqueIdentifier>{9eded832-1b56-4bca-a2a0-ed65750d206a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resource.h">
@@ -33,6 +36,15 @@
     <ClInclude Include="d3dclass.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="colorshaderclass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cameraclass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="modelclass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dx11_demo.cpp">
@@ -50,6 +62,15 @@
     <ClCompile Include="d3dclass.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="colorshaderclass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cameraclass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="modelclass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="dx11_demo.rc">
@@ -63,5 +84,13 @@
     <Image Include="dx11_demo.ico">
       <Filter>资源文件</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shader\color.vs">
+      <Filter>shader</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\color.ps">
+      <Filter>shader</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
