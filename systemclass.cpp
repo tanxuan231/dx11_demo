@@ -192,7 +192,7 @@ void SystemClass::InitializeWindows(int& screenWidth, int& screenHeight)
 	m_hinstance = GetModuleHandle(NULL);
 
 	// Give the application a name.
-	m_applicationName = L"Engine";
+	m_applicationName = L"dx11Demo";
 
 	// Setup the windows class with default settings.
 	wc.style         = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
@@ -254,7 +254,7 @@ void SystemClass::InitializeWindows(int& screenWidth, int& screenHeight)
 	SetFocus(m_hwnd);
 
 	// Hide the mouse cursor.
-	ShowCursor(false);
+	//ShowCursor(false);
 
 	return;
 }

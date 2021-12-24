@@ -220,7 +220,6 @@ bool ModelClass::LoadTexture(ID3D11Device* device, ID3D11DeviceContext* deviceCo
 {
 	bool result;
 
-
 	// Create the texture object.
 	m_Texture = new TextureClass;
 	if (!m_Texture)
