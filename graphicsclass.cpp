@@ -75,7 +75,7 @@ bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 		return false;
 	}
 
-	// Initialize the color shader object.
+	// Initialize the texture shader object.
 	result = m_TextureShader->Initialize(m_Direct3D->GetDevice(), hwnd);
 	if (!result)
 	{
