@@ -45,6 +45,12 @@
     <ClInclude Include="modelclass.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="textureclass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="textureshaderclass.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dx11_demo.cpp">
@@ -71,6 +77,12 @@
     <ClCompile Include="modelclass.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="textureclass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="textureshaderclass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="dx11_demo.rc">
@@ -90,6 +102,12 @@
       <Filter>shader</Filter>
     </FxCompile>
     <FxCompile Include="shader\color.ps">
+      <Filter>shader</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\texture.ps">
+      <Filter>shader</Filter>
+    </FxCompile>
+    <FxCompile Include="shader\texture.vs">
       <Filter>shader</Filter>
     </FxCompile>
   </ItemGroup>
